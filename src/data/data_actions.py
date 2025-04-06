@@ -40,7 +40,7 @@ def update_product(product_id: str, name: str,description:str,price: float, img_
     msg = requests.put(url + product_id, json=body)
     flash(msg, category="succes")
 
-def add_review(product_id: str, text: str, url: str = PROU_URL ) -> str:
+def add_review(product_id: str, text: str, url: str = PROUD_URL ) -> str:
     body = dict(text=text)
     msg = requests.patch(url + product_id, json = body)
     flash(msg, category="succes")
